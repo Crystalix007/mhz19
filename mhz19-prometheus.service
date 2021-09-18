@@ -1,0 +1,14 @@
+[Unit]
+Description=Stats service for CO2 meter
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+ExecReload=/bin/kill -HUP $MAINPID
+ExecStart=/usr/bin/mhz19-prometheus
+Restart=on-failure
+RestartSec=2
+TasksMax=infinity
+
+[Install]
+WantedBy=multi-user.target
