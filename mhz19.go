@@ -11,7 +11,7 @@ type MHZ19 struct {
 }
 
 func (m *MHZ19) Connect() error {
-	c := &serial.Config{Name: "/dev/ttyS0", Baud: 9600}
+	c := &serial.Config{Name: "/dev/ttyUSB0", Baud: 9600}
 	p, err := serial.OpenPort(c)
 	if err != nil {
 		return err
