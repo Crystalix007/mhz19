@@ -5,7 +5,7 @@ After=network-online.target
 
 [Service]
 ExecReload=/bin/kill -HUP $MAINPID
-ExecStart=/usr/bin/mhz19-prometheus
+ExecStart=/usr/bin/co2-logger-prometheus
 Restart=on-failure
 RestartSec=2
 TasksMax=infinity

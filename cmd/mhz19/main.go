@@ -18,5 +18,5 @@ func main() {
 		fmt.Printf("{\"error\": \"%s\"}", err)
 		os.Exit(0)
 	}
-	fmt.Printf("{\"co2\": \"%d\"}", v)
+	fmt.Printf("{\"co2\": %d}", v)
 }
